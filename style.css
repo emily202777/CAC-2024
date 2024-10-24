@@ -1,0 +1,130 @@
+/* Universal reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+  
+
+/* Body styling */
+body {
+  background: radial-gradient(circle, #f6f6f1, #d2c9c9);
+  font-family: 'Nunito', sans-serif;
+  background-color: #f6f6f1;
+  color: #6e402a;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+/* Main header styling */
+.main-header {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  margin-top: 50px; /* Adjust to control space above the bird image */
+}
+
+/* First Screen Bird image styling */
+.bird-image {
+  width: 250px;
+  height: auto;
+  margin-bottom: 20px; /* Adds space between the image and the heading */
+}
+
+/* Header (h1) styling */
+h1 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+/* Paragraph (p) styling */
+p {
+  font-family: 'Nunito', sans-serif;
+  font-size: 18px;
+  margin-top: 15px;
+  margin-left: 300px;
+  margin-right: 150px;
+  line-height: 1.2;
+  text-align: left;
+}
+
+.button-container {
+  margin-top: 15px; /* Adjusted margin-top */
+  text-align: center;
+}
+
+.btn {
+  background-color: #6e402a;
+  color: #f6f6f1;
+  width: 300px; /* Set the desired width */
+  max-width: 90%; /* Ensure responsiveness on smaller screens */
+  aspect-ratio: 423 / 17; /* Maintain the ratio of width to height */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: #41271b;
+}
+
+.username-container {
+  width: 300px; /* Set the desired width */
+  max-width: 90%; /* Ensure responsiveness on smaller screens */
+  aspect-ratio: 423 / 17; /* Maintain the ratio of width to height */
+  background-color: #e8dfd0;
+  padding: 15px; /* Remove default padding */
+  border: none;
+  border-radius: 10px; /* Rounded corners */
+  margin: 10px auto; /* Center the container horizontally and add margin */
+  margin-bottom: 12px;
+  display: flex; /* Use flexbox for centering the content */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+}
+
+.password-container {
+  width: 300px;
+  max-width: 90%;
+  aspect-ratio: 423 / 17;
+  background-color: #e8dfd0;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  margin: 10px auto;
+  margin-bottom: 15px; /* Adjusted margin-bottom */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.text-input::placeholder {
+  color: #ccc3b4; /* Set the desired placeholder text color */
+  opacity: 100; /* Ensures full opacity of the color */
+}
+
+
+/* Styling for the input field */
+.text-input {
+  font-family: 'Nunito', sans-serif;
+  width: 300px; /* Width of the input field */
+  padding: 10px; /* Padding inside the input field */
+  margin: 10px 0; /* Margin above and below the input field */
+  border: none; /* Remove the border */
+  outline: none; /* Remove the focus outline */
+  border-radius: 0px; /* Remove any rounded corners */
+  font-size: 18px;
+  line-height: 1.2;
+  text-align: left;
+  color: #6e402a;
+  background-color: transparent; /* Optional: Set background color to transparent */
+}
+
