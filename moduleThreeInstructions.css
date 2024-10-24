@@ -1,0 +1,79 @@
+/* Reset some default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Nunito', sans-serif;
+    background-color: #b8665f;
+}
+
+/* Full-screen container */
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* 100% of the viewport height */
+    overflow: hidden;
+}
+
+/* Background image styling */
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container while maintaining aspect ratio */
+}
+
+/* First button container (Continue button) */
+.button-container {
+    position: absolute;
+    top: 86.48%; /* Adjust the top value to move the button up or down */
+    left: 91%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/* First button styling (Continue button) */
+.btn {
+    background-color: #fcfc3200;
+    color: #c146cf00;
+    width: 100px;
+    height: 74px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* New button container (hidden initially) */
+.new-button-container {
+    position: absolute;
+    top: 95.5%; /* Adjust the top value to move the container up or down */
+    left: 90.3%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 10px;
+}
+
+/* New button styling */
+.new-btn {
+    background-color: #4caf4f00; /* Green button */
+    color: #4caf4f00;
+    width: 195px;
+    height: 60px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    text-align: center;
+}
