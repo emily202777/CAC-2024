@@ -1,0 +1,66 @@
+/* Reset some default styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  /* Apply a background color to the entire website */
+body {
+  background-color: #f5f5f2; /* Change this to any color you want */
+}
+
+  height: 100%;
+  font-family: 'Nunito', sans-serif;
+}
+
+/* Full-screen container */
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* 100% of the viewport height */
+  overflow: hidden;
+}
+
+/* Background image styling */
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the container while maintaining aspect ratio */
+}
+
+/* Optional: Style the header to fit the full viewport if needed */
+.main-header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Button container styling to overlay on image */
+.button-container {
+  position: absolute;
+  top: 45%; /* Center vertically */
+  left: 34.45%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust to center the button perfectly */
+  text-align: center;
+}
+
+/* Button styling */
+.btn {
+  background-color: #f6f6f100;
+  color: #f6f6f100;
+  width: 40px; /* Set the desired width */
+  max-width: 90%; /* Ensure responsiveness on smaller screens */
+  height: 30px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  text-align: center;
+}
