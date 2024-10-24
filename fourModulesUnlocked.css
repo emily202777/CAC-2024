@@ -1,0 +1,51 @@
+/* Reset some default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Nunito', sans-serif;
+    background-color: #e9eae8;
+}
+
+/* Full-screen container */
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* 100% of the viewport height */
+    overflow: hidden;
+}
+
+/* Background image styling */
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container while maintaining aspect ratio */
+}
+
+/* Button styling */
+/* Button styling */
+.next-page-button {
+    position: absolute;
+    top: 87%;
+    left: 34.45%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    padding: 15px 30px;
+    background-color: #00ff0800; /* Green background */
+    color: rgba(255, 0, 0, 0);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 25; /* Keep it above other elements */
+
+    /* Set specific width and height */
+    width: 40px;  /* Set button width */
+    height: 35px;  /* Set button height */
+}
