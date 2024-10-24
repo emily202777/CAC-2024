@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Title</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="finalWormPage.css"> <!-- Link to your external CSS file -->
+</head>
+
+<body>
+  <header class="main-header">
+    <div class="image-container">
+      <img src="finalWorm.png" id="mainImage" class="background-image">
+    </div>
+    
+    <!-- First button (Continue) -->
+    <div class="continue-button-container">
+      <button onclick="changeImage()" class="continue-btn">Continue</button>
+    </div>
+
+    <!-- New button (Go to Module 3), initially hidden -->
+    <div class="new-button-container">
+      <button id="newBtn" onclick="location.href='moduleThreeInstructions.html'" class="new-btn" style="display: none;"></button>
+    </div>
+  </header>
+
+  <script>
+    // Function to change the image
+    function changeImage() {
+      document.getElementById('mainImage').src = 'threeModulesUnlocked.png'; // Change the image source
+      
+      // Show the new button when the image changes
+      document.getElementById('newBtn').style.display = 'block';
+    }
+  </script>
+
+</body>
+
+</html>
