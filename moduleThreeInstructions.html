@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Title</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="moduleThreeInstructions.css"> <!-- Link to your external CSS file -->
+</head>
+
+<body>
+  <header class="main-header">
+    <div class="image-container">
+      <!-- Add an id to the image to easily access it via JavaScript -->
+      <img src="module3Instructions.png" id="instructionImage" class="background-image">
+
+      <!-- First button container for changing the image -->
+      <div class="button-container">
+        <button onclick="changeImage()" class="btn">Continue</button>
+      </div>
+
+      <!-- New button container (hidden initially) -->
+      <div class="new-button-container">
+        <button id="newButton" onclick="changeToNextImage()" class="new-btn" style="display: none;">Next Page</button>
+      </div>
+
+    </div>
+  </header>
+
+  <script>
+    // JavaScript function to change the image source to module3page1.png
+    function changeImage() {
+      // Select the image by its id and change its source to module3page1.png
+      document.getElementById("instructionImage").src = "module3page1.png";
+      
+      // Show the new button when the image changes to module3page1.png
+      document.getElementById("newButton").style.display = "block";
+    }
+
+    // JavaScript function to toggle images and then redirect to virusGame.html
+    function changeToNextImage() {
+      const currentImage = document.getElementById("instructionImage").src;
+
+      // Check the current image source and change accordingly
+      if (currentImage.includes("module3page1.png")) {
+        // Change to module3page2.png if current image is module3page1.png
+        document.getElementById("instructionImage").src = "module3page2.png";
+      } else if (currentImage.includes("module3page2.png")) {
+        // Change to module3page3.png if current image is module3page2.png
+        document.getElementById("instructionImage").src = "module3page3.png";
+      } else if (currentImage.includes("module3page3.png")) {
+        // Redirect to virusGame.html if current image is module3page3.png
+        window.location.href = "virusGame.html";
+      }
+    }
+  </script>
+</body>
+
+</html>
