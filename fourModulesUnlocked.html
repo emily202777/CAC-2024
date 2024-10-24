@@ -14,10 +14,17 @@
     <div class="image-container">
       <!-- Background image -->
       <img src="fourModulesUnlocked.png" id="instructionImage" class="background-image">
-      <button id="nextPageButton" class="next-page-button"></button>
+      <button id="nextPageButton" class="next-page-button">Next</button>
     </div>
   </header>
 
+  <script>
+    // JavaScript to change the image when the next button is clicked
+    document.getElementById('nextPageButton').addEventListener('click', function() {
+      // Change the src of the image
+      document.getElementById('instructionImage').src = 'module4instructions.png';
+    });
+  </script>
 </body>
 
 </html>
