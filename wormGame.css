@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    background-color: #8e5f49;
+    height: 100%;
+    font-family: 'Nunito', sans-serif;
+  }
+  
+  .image-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .main-header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .button-container {
+    position: absolute;
+    top: 31.5%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .btn {
+    background-color: #f4f46400;
+    color: #f4760800;
+    width: 225px;
+    max-width: 90%;
+    height: 60px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  #worm-container {
+    position: absolute;
+    width: 300px;
+    height: 1000px; /* Restrict the height of the worm spawning area */
+    bottom: 0;
+  }
+  
+  
+  .worm-image {
+    position: absolute;
+    display: none;
+    cursor: pointer;
+    width: 100px; /* Size of the worm image */
+  }
+  
+#score-container {
+  position: absolute;
+  top: 15.5%;
+  left: 62.26%;
+  font-size: 40px;
+  color: #55626c;
+  background-color: rgba(0, 0, 0, 0); /* Semi-transparent background */
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: normal;
+}
