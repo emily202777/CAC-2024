@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Title</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="moduleTwoPageOne.css"> <!-- Link to your external CSS file -->
+  <script>
+    let isPageTwoVisible = false;
+
+    function changeImageOrRedirect() {
+      const image = document.querySelector('.background-image');
+
+      if (!isPageTwoVisible) {
+        // If pPageOne.png is currently showing, change it to pPageTwo.png
+        image.src = 'pPageTwo.png';
+        isPageTwoVisible = true;
+      } else {
+        // If pPageTwo.png is already showing, redirect to the review page
+        window.location.href = 'moduleTwoReviewPage.html';
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <header class="main-header">
+    <div class="image-container">
+      <img src="pPageOne.png" class="background-image">
+      <div class="button-container">
+        <button onclick="changeImageOrRedirect()" class="btn">Continue</button>
+      </div>
+    </div>
+  </header>
+</body>
+
+</html>
