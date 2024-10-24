@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Worm Collection Game</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="wormGame.css"> <!-- Link to your external CSS file -->
+</head>
+
+<body>
+  <header class="main-header">
+    <div class="image-container">
+      <img src="wormGame1.png" id="gameImage" class="background-image">
+    </div>
+    <div class="button-container">
+      <button onclick="startGame()" class="btn">Begin</button>
+    </div>
+    <div id="worm-container">
+      <img src="worm.png" id="worm" class="worm-image" onclick="clickWorm()">
+    </div>
+    <div id="score-container"><span id="score">15</span></div>
+
+  </header>
+
+  <script>
+ let score = 15;
+
+// Start the game and change the background image
+function startGame() {
+  document.getElementById("gameImage").src = "wormGame2.png";
+  spawnWorm();
+}
+
+// Function to randomly position the worm on the bottom part of the screen
+function spawnWorm() {
+  const worm = document.getElementById("worm");
+
+  // Define the restricted area
+  const restrictedWidth = 800;  // The width of the restricted area (where worm can spawn)
+  const restrictedHeight = 300; // The height of the restricted area (e.g., bottom 500 pixels of the screen)
+
+  // Get the actual width and height of the screen
+  const screenWidth = window.innerWidth;
+  const screenHeight = window.innerHeight;
+
+  // Calculate random positions within the restricted area
+  const randomX = Math.random() * (restrictedWidth - worm.offsetWidth);
+  const randomY = screenHeight - restrictedHeight + (Math.random() * (restrictedHeight - worm.offsetHeight));
+
+  // Apply the random position
+  worm.style.left = `${randomX}px`;
+  worm.style.top = `${randomY}px`;
+  worm.style.display = "block"; // Make sure the worm is visible
+}
+
+// Function called when the worm is clicked
+function clickWorm() {
+  score--;
+  document.getElementById("score").innerText = score; // Update the score counter
+
+  // Hide the worm after click and respawn at a new location
+  document.getElementById("worm").style.display = "none";
+
+  // Check if the score has reached 0
+  if (score > 0) {
+    spawnWorm(); // Respawn the worm at a new location
+  } else {
+    // Redirect to the final page after the last worm is clicked
+    window.location.href = "finalWormPage.html";
+  }
+}
+
+// Reset the game function
+function resetGame() {
+  score = 15;
+  document.getElementById("score").innerText = score; // Reset the score display
+  document.getElementById("worm").style.display = "none"; // Hide the worm
+}
+
+  </script>
+</body>
+
+</html>
